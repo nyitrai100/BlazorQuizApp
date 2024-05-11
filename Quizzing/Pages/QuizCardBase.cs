@@ -8,7 +8,6 @@ namespace Quizzing.Pages
         public List<Question> Questions { get; set; } = new List<Question>();
         protected int questionIndex = 0;
         protected int score = 0;
-
         protected override Task OnInitializedAsync()
         {
             LoadQuestions();
@@ -21,6 +20,7 @@ namespace Quizzing.Pages
             if (option == Questions[questionIndex].Answer)
             {
                 score++;
+                
             }
             questionIndex++;
         }
