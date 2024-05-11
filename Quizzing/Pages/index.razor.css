@@ -1,0 +1,9 @@
+.title,.subtitle{
+    display: flex;
+    justify-content: center;
+}
+.welcomeGifDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
