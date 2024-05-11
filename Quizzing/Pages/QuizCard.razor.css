@@ -50,3 +50,44 @@
 .next-btn:hover {
     box-shadow: -1.5px 1.5px 10px rgba(0,0,0,0.3);
 }
+.solution-div{
+    display: flex; 
+    justify-content: center
+}
+
+.solution-container{
+    width: 50%;
+    background: #f5f6f6; 
+    padding-left: 10px;
+    margin-top: 40px; 
+    box-shadow: -20px 20px 30px rgba(0,0,0,0.3);
+}
+
+.solution-title{
+    display: flex;
+    justify-content: center; 
+    margin: 10px
+}
+
+.solution-questions{
+    margin-top:20px;
+}
+
+.right-answer{
+    background: green; 
+    padding-top: 15px;
+    color: white;
+    font-size: 14pt; 
+    border-radius: 3px; 
+    border: none;
+    margin-top: 5px;
+}
+
+.other-answers{
+    background-color: white; 
+    color: black;
+    font-size: 14pt; 
+    border-radius: 3px; 
+    border: none;
+    margin-top: 5px;
+}

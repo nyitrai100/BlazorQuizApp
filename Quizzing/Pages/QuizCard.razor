@@ -43,3 +43,34 @@
         }
     </div>
 </div>
+
+@if(questionIndex == Questions.Count()){
+    <div class="solution-div">
+    <div class="solution-container">
+        <h1 class="solution-title">
+            Solutions
+        </h1>
+        @for (int i = 0; i < Questions.Count(); i++)
+        {
+            <h3 class="solution-questions">
+                @(i + 1).Question: @Questions[i].QuestionTitle
+            </h3>
+            foreach (var answer in Questions[i].Options)
+            {
+                if (@answer == @Questions[i].Answer)
+                {
+                    <p class="right-answer">     
+                         @answer
+                    </p>
+                }
+                else
+                {
+                    <p class="other-answers">
+                        @answer
+                    </p>
+                }
+            }
+        }
+        </div>
+    </div>
+}
