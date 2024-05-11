@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Quizzing.Models;
+
 
 namespace Quizzing.Components
 {
@@ -14,4 +16,6 @@ namespace Quizzing.Components
             await OnOptionSelected.InvokeAsync(Option);
         }
     }
+
+   
 }

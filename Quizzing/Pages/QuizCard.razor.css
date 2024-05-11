@@ -52,7 +52,9 @@
 }
 .solution-div{
     display: flex; 
-    justify-content: center
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .solution-container{
