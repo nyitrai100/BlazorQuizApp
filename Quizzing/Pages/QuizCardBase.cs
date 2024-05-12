@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using System.Net.Sockets;
+using Microsoft.AspNetCore.Components;
 using Quizzing.Models;
 
 namespace Quizzing.Pages
@@ -6,8 +7,10 @@ namespace Quizzing.Pages
     public class QuizCardBase : ComponentBase
     {
         public List<Question> Questions { get; set; } = new List<Question>();
+        public List<string> answeredList = new List<string>(); 
         protected int questionIndex = 0;
         protected int score = 0;
+        
         protected override Task OnInitializedAsync()
         {
             LoadQuestions();
@@ -22,6 +25,7 @@ namespace Quizzing.Pages
                 score++;
                 
             }
+            answeredList.Add(option);
             questionIndex++;
         }
 
@@ -29,6 +33,7 @@ namespace Quizzing.Pages
         {
             score = 0;
             questionIndex = 0;
+            answeredList.Clear();
         }
 
         private void LoadQuestions()
