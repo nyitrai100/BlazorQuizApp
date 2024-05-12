@@ -3,7 +3,10 @@
 @using Quizzing.Components
 
 <div class="container">
+    
+   
     <div class="quiz">
+        @(questionIndex >= Questions.Count() ? "" : $"{questionIndex + 1} / {Questions.Count()}")
         @if (questionIndex < Questions.Count())
         {
             <div class="app-title">
@@ -24,7 +27,7 @@
             <div class="app-title">
                 @if (score > (Questions.Count / 2))
                 {
-                    <img src="https://i0.wp.com/kcstudio.org/wp-content/uploads/2013/07/despicable-me-2-img.jpg?w=775&ssl=1" width="90%" height="90%" />
+                    <img src="https://i0.wp.com/kcstudio.org/wp-content/uploads/2013/07/despicable-me-2-img.jpg?w=775&ssl=1" width="90%" height="90%"/>
                 }
                 else
                 {
